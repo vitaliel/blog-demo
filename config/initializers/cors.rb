@@ -5,12 +5,18 @@
 
 # Read more: https://github.com/cyu/rack-cors
 
-# Rails.application.config.middleware.insert_before 0, Rack::Cors do
-#   allow do
-#     origins "example.com"
-#
-#     resource "*",
-#       headers: :any,
-#       methods: [:get, :post, :put, :patch, :delete, :options, :head]
-#   end
-# end
+origins = ["webng.md"]
+
+if Rails.env.development?
+  origins << 'lvh.me' << 'localhost' << 'localhost:4200'
+end
+
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins origins
+
+    resource "*",
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+  end
+end
