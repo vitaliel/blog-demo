@@ -1,5 +1,11 @@
 # README
 
+```
+curl http://localhost:3000/
+
+curl -X POST http://localhost:3000/posts -d '{"content": "First post"}' -H 'Content-type: application/json'
+```
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
