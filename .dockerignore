@@ -1,0 +1,13 @@
+.dockerignore
+.gitignore
+.git
+.byebug_history
+.env*
+
+/.bundle
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep

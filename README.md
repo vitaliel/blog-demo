@@ -1,9 +1,16 @@
 # README
 
+API usage with curl:
 ```
 curl http://localhost:3000/
 
 curl -X POST http://localhost:3000/posts -d '{"content": "First post"}' -H 'Content-type: application/json'
+```
+
+Docker build:
+```
+docker build -t vitaliel/blog-demo .
+docker push vitaliel/blog-demo
 ```
 
 This README would normally document whatever steps are necessary to get the
